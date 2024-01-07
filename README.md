@@ -1,3 +1,7 @@
+![image](https://github.com/doxgxxn/YTfinetunedBERT/assets/135602281/ad9166eb-94a7-4cfa-acb3-464cf1090bbf)
+
+
+
 # Youtube Comment checker- BERT multilingual fine tuned
 
 현재 버전: https://youtube-comment.streamlit.app
