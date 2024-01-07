@@ -1,5 +1,6 @@
 streamlit
-torch
-transformers
+# torch # for app 1
+# transformers # for app 1
 requests
 bs4
+pandas
