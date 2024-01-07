@@ -11,6 +11,7 @@
 ![image](https://github.com/doxgxxn/YTfinetunedBERT/assets/135602281/21734961-4277-458b-9d5f-cbb4f42c0ba3)
 
 ### 2. 동영상 리스트 중 하나의 Value 값을 선택
+참고) https://www.youtube.com/watch?v=KodnOX7IeeI << 유튜브 동영상의 마지막 값 입니다
 ---
 ![image](https://github.com/doxgxxn/YTfinetunedBERT/assets/135602281/c1a9141d-8013-46b9-921f-2c69b6f4bc62)
 
