@@ -1,5 +1,3 @@
-![image](https://github.com/doxgxxn/YTfinetunedBERT/assets/135602281/ad9166eb-94a7-4cfa-acb3-464cf1090bbf)
-![image](https://github.com/doxgxxn/YTfinetunedBERT/assets/135602281/5c5a751e-46e2-4d05-b5b2-1de3e951728e)
 
 
 
