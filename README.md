@@ -1,5 +1,7 @@
 # Youtube Comment checker- BERT multilingual fine tuned
 
+현재 버전: https://youtube-comment.streamlit.app/
+
 
 
 ### 1. 유튜버의 아이디를 입력하고 동영상 리스트를 확인
