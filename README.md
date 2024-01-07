@@ -2,6 +2,8 @@
 
 현재 버전: https://youtube-comment.streamlit.app
 
+### optional) 추가하고 싶은 SPAM 값 지정
+![image](https://github.com/doxgxxn/YTfinetunedBERT/assets/135602281/75a38393-5115-44ba-a020-4aa8db922c9d)
 
 
 ### 1. 유튜버의 아이디를 입력하고 동영상 리스트를 확인
