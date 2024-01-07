@@ -134,6 +134,7 @@ if sidebar_text and button_in_sidebar:
 
 ### main area
 st.header('Spam comment checker')
+st.markdown('---')
 st.text("Example)")
 st.code("secheppo")
 st.code("chlwlals1gyul")
