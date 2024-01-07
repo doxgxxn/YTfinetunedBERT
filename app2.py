@@ -100,7 +100,7 @@ def get_youtube_comments(video_id):
                     # "votes": c.get('voteCount', {}).get('simpleText', '0'),
                 })
             time.sleep(0.5)
-        print('scrolling done')
+        # print('scrolling done')
         return pd.DataFrame(results)
 
 
@@ -164,14 +164,16 @@ try:
         # 스팸 리스트 확인
         df = df[df['check'].apply(lambda x: any(word in x for word in spam))]
         del df['check']
+        if len(df) != 0:
+            st.write("**중복을 제거한 리스트**")
+            st.write(pd.DataFrame({"unique_comment":df['comment'].unique().tolist()}))
+            st.markdown("---")
+            st.write('Spam Comment List')
+            st.write(df.reset_index(drop=True))
 
-        st.write("**중복을 제거한 리스트**")
-        st.write(pd.DataFrame({"unique_comment":df['comment'].unique().tolist()}))
-        st.markdown("---")
-        st.write('Spam Comment List')
-        st.write(df.reset_index(drop=True))
-        print('finished!')
-        
+        else:
+            st.write("**스팸 메시지가 없습니다!**")
+            
 except Exception as e:
     print(e)
     st.write('Pleas Check the value agian')
