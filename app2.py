@@ -104,15 +104,49 @@ def get_youtube_comments(video_id):
         return pd.DataFrame(results)
 
 
-### input and button
+
+def get_spam():
+    if sidebar_text:
+            spam.extend([i.strip() for i in sidebar_text.split(',')])
+            return spam
+    else:
+        return spam
+
+
+# ### sidebar area    
+spam = ['랭솔팅배', '이게임드', '이게임롤', '이게임벳', '이게임벴', '이게임뱃', '이게임뱄']
+
+st.sidebar.write('**현재 검사 목록**')
+st.sidebar.write(', '.join(spam))
+st.sidebar.markdown("---")
+
+sidebar_text = st.sidebar.text_input("추가하고 싶은 SPAM 이름이 있다면 콤마로 구분해서 추가하세요")
+button_in_sidebar = st.sidebar.button("추가")
+
+
+
+if sidebar_text and button_in_sidebar:
+    spam.extend([i.strip() for i in sidebar_text.split(',')])
+    st.sidebar.write('**최종 검사 목록**')
+    st.sidebar.write(', '.join(spam))
+
+
+
+### main area
 st.header('Spam comment checker')
 st.text("Example)")
 st.code("secheppo")
 st.code("chlwlals1gyul")
 
 st.write("**유튜버의 아이디를 입력하세요**")
-user_input1 = st.text_area("예시를 확인하세요")
-button1 = st.button('Check videos')
+col1, col2 = st.columns([3,1])
+with col1:
+    user_input1 = st.text_area("예시를 확인하세요, 10개를 확인하면 시간이 걸립니다")
+with col2:
+    st.write(" ")
+    st.write(" ")
+    button1 = st.button('Check Videos')
+    button3 = st.button('Run 10 Videos(1-2m)')
 try:
     if user_input1 and button1:
         if user_input1[0] == '@':
@@ -122,22 +156,43 @@ except Exception as e:
     print(e)
     st.write('Please check the name again')
 
+try:
+    if user_input1 and button3:
+        if user_input1[0] == '@':
+            user_input1 = user_input1[1:]
+        df = pd.DataFrame()
 
-spam = ['랭솔팅배', '이게임드', '이게임롤', '이게임벳', '이게임벴', '이게임뱃', '이게임뱄']
-st.sidebar.write('**현재 검사 목록**')
-st.sidebar.write(', '.join(spam))
-st.sidebar.markdown("---")
+        # df 전체 합치기
+        for value in get_url(user_input1.strip())['value'].to_list():
+            s_df = get_youtube_comments(value)
+            df = pd.concat([df,s_df])
 
-sidebar_text = st.sidebar.text_input("추가하고 싶은 SPAM 이름이 있다면 콤마로 구분해서 추가하세요")
-button_in_sidebar = st.sidebar.button("추가")
-# 사이드바에 버튼 추가
+        df.reset_index(drop=True, inplace=True)
+        # 길이 설정
+        df = df[df['comment'].apply(lambda x : 4 < len(x) < 100)].reset_index(drop=True)
+
+        # 한글, 숫자, 영어만 남기고 제거
+        df['check'] = df['comment'].apply(lambda x: re.sub(r'[^0-9a-zA-Zㄱ-ㅎ 가-힣]', '', x))
+        
+        # 스팸 리스트 확인
+        df = df[df['check'].apply(lambda x: any(word in x for word in get_spam()))]
+        del df['check']
+        if len(df) != 0:
+            st.write("**중복을 제거한 리스트**")
+            st.write(pd.DataFrame({"unique_comment":df['comment'].unique().tolist()}))
+            st.markdown("---")
+            st.write('Spam Comment List')
+            st.write(df.reset_index(drop=True))
+
+        else:
+            st.write("**스팸 메시지가 없습니다!**")
+            
+except Exception as e:
+    print(e)
+    st.write('Pleas Check the name agian')
 
 
 
-if sidebar_text and button_in_sidebar:
-    spam.extend([i.strip() for i in sidebar_text.split(',')])
-    st.sidebar.write('**최종 검사 목록**')
-    st.sidebar.write(', '.join(spam))
 
 st.markdown("---")
 
@@ -162,7 +217,7 @@ try:
         df['check'] = df['comment'].apply(lambda x: re.sub(r'[^0-9a-zA-Zㄱ-ㅎ 가-힣]', '', x))
         
         # 스팸 리스트 확인
-        df = df[df['check'].apply(lambda x: any(word in x for word in spam))]
+        df = df[df['check'].apply(lambda x: any(word in x for word in get_spam()))]
         del df['check']
         if len(df) != 0:
             st.write("**중복을 제거한 리스트**")
