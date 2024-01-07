@@ -12,6 +12,8 @@
 
 ### 2. 동영상 리스트 중 하나의 Value 값을 선택
 ---
+```참고) https://www.youtube.com/watch?v=65fCx-54N9w << 유튜브 동영상의 " = " 이후마지막 값 입니다```
+
 ![image](https://github.com/doxgxxn/YTfinetunedBERT/assets/135602281/c1a9141d-8013-46b9-921f-2c69b6f4bc62)
 
 ### 3. 중복이 제거된 댓글의 내용을 복사
@@ -21,7 +23,7 @@
 ### 4. 유튜브 댓글의 내용을 찾아서 제거
 ---
 ![image](https://github.com/doxgxxn/YTfinetunedBERT/assets/135602281/e1e70d9b-ddf8-488d-a1b9-379d22c98f46)
-
+![image](https://github.com/doxgxxn/YTfinetunedBERT/assets/135602281/dc127fec-fcb7-4ea5-9e2b-549ca89a4c09)
 
 ---
 # web 작동 확인
