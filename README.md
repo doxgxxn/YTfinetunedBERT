@@ -21,7 +21,7 @@
 ### 4. 유튜브 댓글의 내용을 찾아서 제거
 ---
 ![image](https://github.com/doxgxxn/YTfinetunedBERT/assets/135602281/e1e70d9b-ddf8-488d-a1b9-379d22c98f46)
-
+![image](https://github.com/doxgxxn/YTfinetunedBERT/assets/135602281/dc127fec-fcb7-4ea5-9e2b-549ca89a4c09)
 
 ---
 # web 작동 확인
