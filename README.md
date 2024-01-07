@@ -6,7 +6,7 @@
 ![image](https://github.com/doxgxxn/YTfinetunedBERT/assets/135602281/75a38393-5115-44ba-a020-4aa8db922c9d)
 
 
-# 1. 유튜버의 아이디를 입력 후 
+# 1. 유튜버의 아이디를 입력 후 A or B 실행
 
 ## A-1: 동영상 리스트 확인 버튼(Check Videos)
 
