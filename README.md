@@ -1,4 +1,6 @@
-![Uploading image.png…]()
+![image](https://github.com/doxgxxn/YTfinetunedBERT/assets/135602281/8c03bc5e-6997-47f2-864b-b69ee43f2b8a)
+![image](https://github.com/doxgxxn/YTfinetunedBERT/assets/135602281/0595b8fa-2d32-4457-870a-0bfc419683cc)
+
 
 
 
