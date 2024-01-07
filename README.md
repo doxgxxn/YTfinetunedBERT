@@ -18,3 +18,7 @@
 ---
 ![image](https://github.com/doxgxxn/YTfinetunedBERT/assets/135602281/e1e70d9b-ddf8-488d-a1b9-379d22c98f46)
 
+
+---
+# web 작동 확인
+![image](https://github.com/doxgxxn/YTfinetunedBERT/assets/135602281/1cdd2118-b048-4be1-bf6a-775090769d51)
