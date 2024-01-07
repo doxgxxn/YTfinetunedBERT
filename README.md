@@ -1,6 +1,6 @@
 # Youtube Comment checker- BERT multilingual fine tuned
 
-현재 버전: [(https://youtube-comment.streamlit.app/)](https://youtube-comment.streamlit.app/)
+현재 버전: <a href="https://youtube-comment.streamlit.app/" target="_blank">애플리케이션 열기</a>
 
 
 
