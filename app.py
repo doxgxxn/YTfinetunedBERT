@@ -156,12 +156,11 @@ try:
 
         df = get_youtube_comments(user_input2)
         df = df[df['comment'].apply(lambda x : 4 < len(x) < 80)].reset_index(drop=True)
-        df['x'] = df['id'] +' '+ df['comment']
         
         print('length of df :', len(df))
         print('start modeling')
         # predicting
-        sample = tokenizer(df['x'].to_list(), padding=True, truncation=True, max_length=512, return_tensors='pt')
+        sample = tokenizer(df['comment'].to_list(), padding=True, truncation=True, max_length=64, return_tensors='pt')
         output = model(**sample)
 
         print('modeling done')
