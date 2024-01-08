@@ -133,7 +133,21 @@ if sidebar_text and button_in_sidebar:
 
 
 ### main area
-st.header('Spam comment checker')
+
+st.markdown(
+    """
+    <style>
+        h1 {
+            background-color: #cccccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+st.header('Youtube Comment Checker')
 st.markdown('---')
 st.text("Example)")
 st.code("secheppo")
