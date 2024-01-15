@@ -10,7 +10,7 @@
 
 ## A-1: 동영상 리스트 확인 버튼(Check Videos)
 
-![image](https://github.com/doxgxxn/YTfinetunedBERT/assets/135602281/1b4331d9-037f-40e3-bffa-f53e982b9401)
+![image](https://github.com/doxgxxn/YTfinetunedBERT/assets/135602281/1b4331d9-037f-40e3-bffa-f53e982b9401) 
 
 
 ## A-2: 동영상 리스트 중 하나의 Value 값을 선택
