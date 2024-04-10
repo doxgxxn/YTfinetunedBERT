@@ -33,10 +33,3 @@
 ## web 작동 확인
 ![image](https://github.com/doxgxxn/YTfinetunedBERT/assets/135602281/1cdd2118-b048-4be1-bf6a-775090769d51)
 
-
-
---- 
-## problems..
-BERT모델을 사용하면 작은 변동 랭솔팅배 -> 랭솔딩배 를 감지할 수 있지만
-streamlit 서버 할당량이 적어서 받아오는 댓글의 수가 많을 경우 터져버림
-현재는 어쩔 수 없이 MODEL을 사용하지 않는 APP2.PY를 사용해서 추가하고 싶은 SPAM 값을 추가하여 댓글 선별
