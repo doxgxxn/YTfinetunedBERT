@@ -232,4 +232,4 @@ try:
             
 except Exception as e:
     print(e)
-    st.write('Pleas Check the value agian')
+    st.write('스팸 메시지가 없습니다!')
